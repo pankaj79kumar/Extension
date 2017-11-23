@@ -1,0 +1,56 @@
+{
+	"name": "SyncCategories",
+	"version": "1.0",
+	"license-name": "GPL-3.0+",
+	"author": [
+		"Pankaj Kumar"
+	],
+	"require": [ "1.28" ],
+	"url": "",
+	"descriptionmsg": "syncarticle-desc",
+	"type": "specialpage",
+	"MessagesDirs": {
+		"SyncCategories": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"SyncCategories\\Hook": "src/Hooks.php",
+		"SyncCategories\\SyncCategories": "src/SyncCategories.php",
+		"SyncCategories\\SyncCategoriesJob": "src/SyncCategoriesJob.php"
+	},
+	"JobClasses": {
+		"syncCategories": "SyncCategories\\SyncCategoriesJob"
+	},
+	
+	"SpecialPages": {
+		"SyncCategories": "SyncCategories\\SpecialSyncCategories"
+	},
+	"GroupPermissions": {
+		"sysop": {
+			"sync-categories": true
+		}
+	},
+	"AvailableRights": [
+		"sync-categories"
+	],
+	"Hooks": {
+		"PageContentSave": [
+			"SyncCategories\\Hook::onPageContentSave"
+		],
+		"PageContentSaveComplete": [
+			"SyncCategories\\Hook::onPageContentSaveComplete"
+		],
+		"AdminLinks": [
+			"SyncCategories\\Hook::addToAdminLinks"
+		]
+	},
+	"config": {
+		"SyncCategories": false,
+		"SyncTargetsUrl": "http://dscwiki.dev.becpsn.com/mediawiki",
+		"SyncLoginUser": null,
+		"SyncLoginPass": null,
+		"SyncLoginDomain": null
+	},
+	"manifest_version": 1
+}
