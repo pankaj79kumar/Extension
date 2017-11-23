@@ -1,5 +1,6 @@
 # Extension
-Mediawiki Extension
+= Mediawiki Extension =
+
 = Sync Mediawiki Categories =
 
 This is MediaWiki extension to specify that Sync the all article from particular Categories from one Mediawiki to Other.
