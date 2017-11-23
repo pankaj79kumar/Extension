@@ -47,7 +47,7 @@
 	},
 	"config": {
 		"SyncCategories": false,
-		"SyncTargetsUrl": "http://dscwiki.dev.becpsn.com/mediawiki",
+		"SyncTargetsUrl": "http://localhost:3000",
 		"SyncLoginUser": null,
 		"SyncLoginPass": null,
 		"SyncLoginDomain": null
